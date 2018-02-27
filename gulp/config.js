@@ -7,10 +7,10 @@ const globAll = require( 'glob-all' );
  * Set up file paths
  */
 const loc = {
-  src:  './teachers_digital_platform/',
-  dist: './teachers_digital_platform/static/tdp/',
+  src:  './{{cookiecutter.package_name}}/',
+  dist: './{{cookiecutter.package_name}}/static/tdp/',
   lib:  './node_modules/', // eslint-disable-line no-sync, no-inline-comments, max-len
-  test: './teachers_digital_platform/tests/'
+  test: './{{cookiecutter.package_name}}/tests/'
 };
 
 module.exports = {
@@ -55,7 +55,7 @@ module.exports = {
   },
   styles: {
     cwd:      loc.src + '/css',
-    src:      '/tdp.less',
+    src:      '/{{cookiecutter.package_name}}.less',
     dest:     loc.dist + '/css',
     settings: {
       paths: globAll.sync( [

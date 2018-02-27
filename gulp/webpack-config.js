@@ -10,7 +10,7 @@ const UglifyWebpackPlugin = require( 'uglifyjs-webpack-plugin' );
 
 
 // Constants
-const COMMON_BUNDLE_NAME = 'tdp.js';
+const COMMON_BUNDLE_NAME = '{{cookiecutter.package_name}}.js';
 
 // Commmon webpack 'module' option used in each configuration.
 // Runs code through Babel and uses global supported browser list.

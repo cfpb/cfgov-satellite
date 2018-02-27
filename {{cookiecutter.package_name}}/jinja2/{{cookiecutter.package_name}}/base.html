@@ -1,3 +1,4 @@
+{% raw %}
 {% extends 'layout-2-1-bleedbar.html' %}
 
 
@@ -27,7 +28,9 @@
 {% block css -%}
     {{ super() }}
 
-    <link rel="stylesheet" href="{{ static('tdp/css/tdp.css') }}">
+{% endraw %}
+    <link rel="stylesheet" href="{{ "{{" }} static('{{cookiecutter.package_name}}/css/{{cookiecutter.package_name}}.css') {{ "}}" }}">
+{% raw %}
 {%- endblock css %}
 
 
@@ -49,7 +52,9 @@
     {# Include site-wide JavaScript. #}
     <script src="{{ static('js/routes/common.js') }}"></script>
 
-    <script src="{{ static('tdp/js/tdp.js') }}"></script>
+{% endraw %}
+    <script src="{{ "{{" }} static('{{cookiecutter.package_name}}/js/{{cookiecutter.package_name}}.js') {{ "}}" }}"></script>
+{% raw %}
 <!--<![endif]-->
 
     <script>
@@ -63,3 +68,4 @@
     //]]>
     </script>
 {%- endblock javascript %}
+{% endraw %}
