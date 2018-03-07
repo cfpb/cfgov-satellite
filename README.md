@@ -18,7 +18,7 @@
    cookiecutter cfgov-satellite 
    ```
 
-   Cookiecutter will prompt you for the pacakge name:
+   Cookiecutter will prompt you for the package name:
 
    <pre>
    package_name [satellite app package name]: <b>my_satellite_app</b>
